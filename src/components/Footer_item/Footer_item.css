@@ -1,0 +1,23 @@
+.Footer_item{
+    width: 255px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.Footer_item>p{
+    margin-top: 20px;
+}
+.footer_text1{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000;
+}
+.footer_text2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 158%;
+    letter-spacing: 0%;
+    color: gray;
+}
