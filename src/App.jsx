@@ -6,7 +6,41 @@ import Box3_item from "./components/Box3_item/Box3_item"
 import Box4_item from "./components/Box4_item/Box4_item"
 import Footer_item from "./components/Footer_item/Footer_item"
 function App() {
-  const [count, setCount] = useState(0)
+  const [them, setThem] = useState()
+
+  function light(){
+    setThem("light")
+  }
+  function dark(){
+    setThem("dark")
+  }
+  if(them=="light"){
+    console.log("light")
+    $(".box").css({
+      "background":"#323232"
+    })
+    $(".box3,.footer").css({
+      "background":"#373737"
+    })
+    $("p").css({
+      "color":"#fff"
+    })
+    $(".box2_text1, .box2_text3, .box3_text1, .box2_text3, .box4_text1, .Footer_item, .box2_text2").css({
+      "color":"#fff"
+    })
+  }
+  if(them=="dark"){
+    console.log("dark")
+    $(".box").css({
+      "background":"#fff"
+    })
+    $(".box2_text1, .box2_text3, .box3_text1, .box2_text3, .box4_text1, .Footer_item, .box2_text2").css({
+      "color":"#323232"
+    })
+    $(".box3,.footer").css({
+      "background":"#F6F6F8"
+    })
+  }
 
   return (
     <>
@@ -19,12 +53,16 @@ function App() {
               <div className="nav_item">Услуги</div>
               <div className="nav_item">Новости</div>
               <div className="nav_item">Контакты</div>
+              <div className="them_cont">
+                <div className="them_btn1" onClick={light}></div>
+                <div className="them_btn2" onClick={dark}></div>
+              </div>
             </div>
           </div>
           <div className="header_block">
             <p className="header_text1">Передовая IT студия</p>
             <p className="header_text2">Мы создаем легкие решения сложных задач и проблем</p>
-            <div className="header_btn">Наши проекты</div>
+            <div className="header_btn"><p>Наши проекты</p></div>
           </div>
         </div>
 
@@ -36,7 +74,7 @@ function App() {
             <Box_item></Box_item>
             <Box_item></Box_item>
           </div>
-          <div className="box2_btn1">Все услуги</div>
+          <div className="box2_btn1"><p>Все услуги</p></div>
         </div>
 
         <div className="box3">
