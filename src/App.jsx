@@ -74,7 +74,7 @@ function App() {
             <Box_item></Box_item>
             <Box_item></Box_item>
           </div>
-          <div className="box2_btn1"><p>Все услуги</p></div>
+          <div className="box2_btn1"><p>Всe услуги</p></div>
         </div>
 
         <div className="box3">
